@@ -83,7 +83,7 @@ Once the sequences are added, we need to specify the sampling dates.
 
 Open the "Tip Dates" panel and then select the "Use tip dates" checkbox.
 
-The sampling times are encoded in the sequence names.  We can tell BEAUti to use these by clicking the _Auto-configure_ button. The sampling times appear following the third vertical bar "|" in the sequence name. To extract these times, select "split on character", enter "|" (without the quotes) in the text box immediately to the right, and then select "3" from the drop-down box to the right, as shown in the figure below.
+The sampling times are encoded in the sequence names.  We can tell BEAUti to use these by clicking the _Auto-configure_ button. The sampling times appear following the third vertical bar "\|" in the sequence name. To extract these times, select "split on character", enter "\|" (without the quotes) in the text box immediately to the right, and then select "3" from the drop-down box to the right, as shown in the figure below.
 
 <figure>
 	<a id="fig:example1"></a>
@@ -125,8 +125,8 @@ We first have to choose the tree prior, which in this case is MASCOT. We do this
 By default, the rate dynamics for this setting is `Constant`, which means that effective population sizes and migration rates are assumed to be constant through time.
 We next have to define the sampling location of the individual tips.
 
-Initially the column **Location** should be NOT_SET for every sequence.  
-After clicking the _Guess_ button, you can split the sequence on the vertical bar "|" again by selecting "split on character" and entering "|" in the box. However, the locations are in the fourth group, so this time choose "4" from the drop-down menu.
+Initially the column **Location** should be NOT\_SET for every sequence.
+After clicking the _Guess_ button, you can split the sequence on the vertical bar "\|" again by selecting "split on character" and entering "\|" in the box. However, the locations are in the fourth group, so this time choose "4" from the drop-down menu.
 After clicking the _OK_ button, the window should look like the one shown in the figure below:
 
 <figure>
