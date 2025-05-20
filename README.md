@@ -230,6 +230,24 @@ Next, we want to summarize the trees. This we can do using TreeAnnotator. Until 
 
 #### Producing CCD0 tree
 
+To produce CCD0 summary tree, you will first need to install the CCD package.
+> Open BEAUTi
+> 
+> Select **File -> Manage packages**
+> 
+> Select **CCD** package in the list and select **Install/Upgrade** [Figure 14](#fig:installCCD)
+> 
+> Close BEAUTi
+
+<figure>
+	<a id="fig:installCCD"></a>
+	<img style="width:80%;" src="figures/installCCD0.png">
+	<figcaption>Figure 13: Install CCD package</figcaption>
+</figure>
+<br>
+
+Now you can proceed to make CCD0 tree:
+
 > Open **TreeAnnotator** and then set the options as in the [Figure 13](#fig:ccd0) below. You have to specify the **Burnin percentage**, the **Node heights**, **Input Tree File** and the **Output File**.
 >
 > Use the typed trees in the file `H3N2.H3N2.trees` as **Input Tree File**. Name output file `H3N2.ccd0.tree`.
@@ -240,7 +258,7 @@ Next, we want to summarize the trees. This we can do using TreeAnnotator. Until 
 
 <a id="fig:ccd0"></a> <img src="figures/treeannotator.ccd0.png" width="60%"/>
 
-<figcaption>Figure 13: Make the conditional clade credibility tree.</figcaption>
+<figcaption>Figure 14: Make the conditional clade credibility tree.</figcaption>
 
 </figure>
 
@@ -256,7 +274,7 @@ In each logging step of the tree during the MCMC, MASCOT logs several different 
 >
 > You may optionally increase line weight (**Appearance** \>\> **Line weight**) and tip label font (**Tip Labels** \>\> **Font size**).
 
-Figures 14 and 15 show the MCC and CCD0 trees respectively. First analyse tree for the method you followed.
+Figures 15 and 16 show the MCC and CCD0 trees respectively. First analyse tree for the method you followed.
 
 We can determine if lineages ancestral to samples from New York are actually inferred to be from Hong Kong, or the probability of the root being in any of the locations.
 
@@ -270,7 +288,7 @@ Another important thing to know is that currently, we assume rates to be constan
 
 <a id="fig:example1"></a> <img src="figures/figtree.mcc.png" style="width:100%;"/>
 
-<figcaption>Figure 14: MCC tree, inferred node locations.</figcaption>
+<figcaption>Figure 15: MCC tree, inferred node locations.</figcaption>
 
 </figure>
 
@@ -278,7 +296,7 @@ Another important thing to know is that currently, we assume rates to be constan
 
 <a id="fig:example1"></a> <img src="figures/figtree.ccd0.png" style="width:100%;"/>
 
-<figcaption>Figure 15: CCD0 tree, inferred node locations.</figcaption>
+<figcaption>Figure 16: CCD0 tree, inferred node locations.</figcaption>
 
 </figure>
 

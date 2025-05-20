@@ -385,6 +385,25 @@ After clicking \textbf{Run} the program should summarize the trees.
 
 \textbf{Producing CCD0 tree}
 
+To produce CCD0 summary tree, you will first need to install the CCD package.
+
+\begin{framed}
+	Open BEAUTi and select \textbf{File} >> \textbf{Manage packages}
+	
+	Select \textbf{CCD} package in the list and select \textbf{Install/Upgrade} (see Figure \ref{fig:installCCD})
+	
+	Close BEAUTi
+\end{framed}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.600000\textwidth]{figures/installCCD0.png}
+	\caption{Install CCD package.}
+	\label{fig:installCCD}
+\end{figure}
+
+Now you can proceed to make CCD0 tree:
+
 \begin{framed}
 	Open \textbf{TreeAnnotator} and then set the options as in the Figure \ref{fig:ccd0} below. You have to specify the \textbf{Burnin percentage}, \textbf{Target tree type}, \textbf{Node heights}, \textbf{Input Tree File} and the \textbf{Output File}.
 	Use the typed trees in the file  \lstinline!H3N2.H3N2.trees! as \textbf{Input Tree File}. Name output file \lstinline!H3N2.ccd0.tree!.
