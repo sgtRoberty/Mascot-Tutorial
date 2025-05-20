@@ -14,13 +14,13 @@ Phylogeographic methods can help reveal the movement of genes between population
 
 The structured coalescent allows to coherently model the migration and coalescent process, but struggles with complex datasets due to the need to infer ancestral migration histories. Thus, approximations to the structured coalescent, which integrate over all ancestral migration histories, have been developed. This tutorial gives an introduction into how a MASCOT analysis in BEAST2 can be set-up. MASCOT is short for **M**arginal **A**pproximation of the **S**tructured **CO**alescen **T** {% cite mueller2017mascot --file Mascot-Tutorial/master-refs %} and implements a structured coalescent approximation {% cite Mueller2017 --file Mascot-Tutorial/master-refs %}. This approximation doesn't require migration histories to be sampled using MCMC and therefore allows to analyse phylogenies with more than three or four states.
 
-------------------------------------------------------------------------
+----
 
 # Programs used in this Exercise
 
 ### BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2
 
-BEAST2 (<http://www.beast2.org>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v{{ page.beastversion }} {% cite BEAST2book2014 --file Mascot-Tutorial/master-refs %}.
+BEAST2 ([http://www.beast2.org](http://www.beast2.org)) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v{{ page.beastversion }} {% cite BEAST2book2014 --file Mascot-Tutorial/master-refs %}.
 
 ### BEAUti2 - Bayesian Evolutionary Analysis Utility
 
@@ -36,13 +36,13 @@ TreeAnnotator is provided as a part of the BEAST2 package so you do not need to 
 
 ### Tracer
 
-Tracer (<http://tree.bio.ed.ac.uk/software/tracer>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v{{ page.tracerversion }}.
+Tracer ([http://tree.bio.ed.ac.uk/software/tracer](http://tree.bio.ed.ac.uk/software/tracer)) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v{{ page.tracerversion }}.
 
 ### FigTree
 
-FigTree (<http://tree.bio.ed.ac.uk/software/figtree>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v{{ page.figtreeversion }}.
+FigTree ([http://tree.bio.ed.ac.uk/software/figtree](http://tree.bio.ed.ac.uk/software/figtree)) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v{{ page.figtreeversion }}.
 
-------------------------------------------------------------------------
+----
 
 # Practical: Parameter and State inference using the approximate structured coalescent
 
@@ -160,9 +160,9 @@ Now switch to the "MCMC" tab. Here we can set the length of the MCMC chain and d
 
 </figure>
 
-### Run the Analysis using BEAST2
+### Run the analysis using BEAST2
 
-Run the `*.xml` using BEAST2 or use finished runs from the _precooked-runs_ folder. The analysis should take about 6 to 7 minutes. If you want to learn some more about what the migration rates we actually estimate, have a look at this blog post of Peter Beerli <http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html>.
+Run the `*.xml` using BEAST2 or use finished runs from the _precooked-runs_ folder. The analysis should take about 6 to 7 minutes. If you want to learn some more about what the migration rates we actually estimate, have a look at this blog post of Peter Beerli [http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html](http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html).
 
 ### Analyse the log file using Tracer
 
@@ -198,7 +198,7 @@ In this example, we have relatively little information about the effective popul
 
 We can then look at the inferred migration rates. The migration rates have the label b_migration.\*, meaning that they are backwards in time migration rates. The highest rates are from New York to Hong Kong. Because they are backwards in time migration rates, this means that lineages from New York are inferred to be likely from Hong Kong if we're going backwards in time. In the inferred phylogenies, we should therefore make the observation that lineages ancestral to samples from New York are inferred to be from Hong Kong backwards.
 
-A more in depth explanation of what backwards migration really are can be found here <http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html>
+A more in depth explanation of what backwards migration really are can be found here [http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html](http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html)
 
 <figure>
 
@@ -214,7 +214,7 @@ Next, we want to summarize the trees. This we can do using TreeAnnotator. Until 
 
 #### Producing MCC tree
 
-> Open **TreeAnnotator** and then set the options as in the [Figure 12](#fig:mcc) below. You have to specify the **Burnin percentage**, the **Node heights**, **Input Tree File** and the **Output File**.
+> Open **TreeAnnotator** and then set the options as in the [Figure 12](#fig:mcc) below. You have to specify the **Burnin percentage**, **Target tree type**, **Node heights**, **Input Tree File** and the **Output File**.
 >
 > Use the typed trees in the file `H3N2.H3N2.trees` as **Input Tree File**. Name output file `H3N2.mcc.tree`.
 >
@@ -300,18 +300,18 @@ This error can have different origins and a likely incomplete list is the follow
 
 -   There is strong subpopulation structure within the different subpopulations used. In that case, reconsider if the individual sub-populations used are reasonable.
 
-------------------------------------------------------------------------
+----
 
 # Useful Links
 
 If you interested in the derivations of the marginal approximation of the structured coalescent, you can find them here {% cite Mueller2017 --file Mascot-Tutorial/master-refs %}. This paper also explains the mathematical differences to other methods such as the theory underlying BASTA. To get a better idea of how the states of internal nodes are calculated, have a look in this paper {% cite mueller2017mascot --file Mascot-Tutorial/master-refs %}.
 
--   MASCOT source code: <https://github.com/nicfel/Mascot>
+-   MASCOT source code: [https://github.com/nicfel/Mascot](https://github.com/nicfel/Mascot)
 -   [Bayesian Evolutionary Analysis with BEAST 2](http://www.beast2.org/book.html) {% cite BEAST2book2014 --file Mascot-Tutorial/master-refs.bib %}
--   BEAST 2 website and documentation: <http://www.beast2.org/>
--   Join the BEAST user discussion: <http://groups.google.com/group/beast-users>
+-   BEAST 2 website and documentation: [http://www.beast2.org/](http://www.beast2.org/)
+-   Join the BEAST user discussion: [http://groups.google.com/group/beast-users](http://groups.google.com/group/beast-users)
 
-------------------------------------------------------------------------
+----
 
 # Relevant References
 
