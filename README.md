@@ -58,7 +58,7 @@ The aim is to:
 
 ### Download MASCOT
 
-First, we have to download the package MASCOT using the BEAUTi package manager. Go to *File \>\> Manage Packages* and download the package MASCOT.
+First, we have to download the package MASCOT using the BEAUTi package manager. Go to **File** >> **Manage Packages** and download the package MASCOT.
 
 <figure>
 
@@ -72,13 +72,13 @@ MASCOT will only be available in BEAUti once you close and restart the program.
 
 ### Loading the Influenza A/H3N2 Sequences (Partitions)
 
-The sequence alignment is in the file [H3N2.nexus](http://github.com/nicfel/Mascot-Tutorial/raw/master/data/H3N2.nexus). Right-click on this link and save it to a folder on your computer. Once downloaded, this file can either be drag-and-dropped into BEAUti or added by using BEAUti's menu system via *File \>\> Import Alignment*. Once the sequences are added, we need to specify the sampling dates.
+The sequence alignment is in the file [H3N2.nexus](http://github.com/nicfel/Mascot-Tutorial/raw/master/data/H3N2.nexus). Right-click on this link and save it to a folder on your computer. Once downloaded, this file can either be drag-and-dropped into BEAUti or added by using BEAUti's menu system via **File** >> **Import Alignment**. Once the sequences are added, we need to specify the sampling dates.
 
 ### Get the sampling times (Tip Dates)
 
 Open the "Tip Dates" panel and then select the "Use tip dates" checkbox.
 
-The sampling times are encoded in the sequence names. We can tell BEAUti to use these by clicking the *Auto-configure* button. The sampling times appear following the third vertical bar "\|" in the sequence name. To extract these times, select "split on character", enter "\|" (without the quotes) in the text box immediately to the right, and then select "3" from the drop-down box to the right, as shown in the figure below.
+The sampling times are encoded in the sequence names. We can tell BEAUti to use these by clicking the **Auto-configure** button. The sampling times appear following the third vertical bar "\|" in the sequence name. To extract these times, select "split on character", enter "\|" (without the quotes) in the text box immediately to the right, and then select "3" from the drop-down box to the right, as shown in the figure below.
 
 <figure>
 
@@ -92,7 +92,7 @@ Clicking "Ok" should now populate the table with the sample times extracted from
 
 ### Specify the Site Model (Site Model)
 
-Next, we have to specify the site model. To do this, choose the "Site Model" tab. For Influenza Hemagluttanin sequences as we have here, HKY is the most commonly used model of nucleotide evolution. This model allows for differences in transversion and transition rates, meaning that changes between bases that are chemically more closely related (transitions) are allowed to have a different rate to changes between bases that chemically more distinct (transversions). Additionally, we should allow for different rate categories for different sites in the alignment. This can be done by setting the *Gamma Category Count* to 4, which is just a value that has typically been used. Make sure that estimate is checked next to the shape parameter. To reduce the number of parameters we have to estimate, we can set Frequencies to Empirical.
+Next, we have to specify the site model. To do this, choose the "Site Model" tab. For Influenza Hemagluttanin sequences as we have here, HKY is the most commonly used model of nucleotide evolution. This model allows for differences in transversion and transition rates, meaning that changes between bases that are chemically more closely related (transitions) are allowed to have a different rate to changes between bases that chemically more distinct (transversions). Additionally, we should allow for different rate categories for different sites in the alignment. This can be done by setting the _Gamma Category Count_ to 4, which is just a value that has typically been used. Make sure that estimate is checked next to the shape parameter. To reduce the number of parameters we have to estimate, we can set Frequencies to Empirical.
 
 <figure>
 
@@ -116,9 +116,9 @@ For rapidly evolving viruses, the assumption of a strict molecular clock is ofte
 
 ### Get the sampling locations (Tip Locations)
 
-We first have to choose the tree prior, which in this case is MASCOT. We do this by switching to the "Priors" tab. Search the drop down menu next to `Tree.t:H3N2` and choose MASCOT. By default, the rate dynamics for this setting is `Constant`, which means that effective population sizes and migration rates are assumed to be constant through time. We next have to define the sampling location of the individual tips.
+We first have to choose the tree prior, which in this case is MASCOT. We do this by switching to the _Priors_ tab. Search the drop down menu next to `Tree.t:H3N2` and choose MASCOT. By default, the rate dynamics for this setting is `Constant`, which means that effective population sizes and migration rates are assumed to be constant through time. We next have to define the sampling location of the individual tips.
 
-Initially the column **Location** should be NOT_SET for every sequence. After clicking the *Guess* button, you can split the sequence on the vertical bar "\|" again by selecting "split on character" and entering "\|" in the box. However, the locations are in the fourth group, so this time choose "4" from the drop-down menu. After clicking the *OK* button, the window should look like the one shown in the figure below:
+Initially the column **Location** should be _NOT\_SET_ for every sequence. After clicking the **Guess** button, you can split the sequence on the vertical bar "\|" again by selecting "split on character" and entering "\|" in the box. However, the locations are in the fourth group, so this time choose "4" from the drop-down menu. After clicking the **OK** button, the window should look like the one shown in the figure below:
 
 <figure>
 
@@ -132,9 +132,9 @@ Initially the column **Location** should be NOT_SET for every sequence. After cl
 
 Now, we need to set the priors for the various parameters of the model. You can find the parameter priors below the tree prior.
 
-First, consider the effective population size parameter *Ne*. Since we have only a few samples per location, meaning little information about the different effective population sizes, we will need an informative prior. In this case we will use a log normal prior with parameters M=0 and S=1. (These are respectively the mean and variance of the corresponding normal distribution in log space.) To use this prior, choose "Log Normal" from the drop down menu to the right of the `Ne.t:H3N2` parameter label, then click the arrow to the left of the same label and fill in the parameter values appropriately (i.e. M=0 and S=1). Ensure that the "Mean In Real Space" checkbox remains unchecked.
+First, consider the effective population size parameter _Ne_. Since we have only a few samples per location, meaning little information about the different effective population sizes, we will need an informative prior. In this case we will use a log normal prior with parameters M=0 and S=1. (These are respectively the mean and variance of the corresponding normal distribution in log space.) To use this prior, choose "Log Normal" from the drop down menu to the right of the `Ne.t:H3N2` parameter label, then click the arrow to the left of the same label and fill in the parameter values appropriately (i.e. M=0 and S=1). Ensure that the "Mean In Real Space" checkbox remains unchecked.
 
-The existing exponential distribution as a prior on the migration rate puts much weight on lower values while not prohibiting larger ones. For migration rates, a prior that prohibits too large values while not greatly distinguishing between very small and very *very* small values is generally a good choice. Be aware however that the exponential distribution is quite an informative prior: one should be careful that to choose a mean so that feasible rates are at least within the 95% HPD interval of the prior. (This can be determined by clicking the arrow to the left of the parameter name and looking at the values below the graph that appears on the right.) We keep the default mean value of 1.
+The existing exponential distribution as a prior on the migration rate puts much weight on lower values while not prohibiting larger ones. For migration rates, a prior that prohibits too large values while not greatly distinguishing between very small and very _very_ small values is generally a good choice. Be aware however that the exponential distribution is quite an informative prior: one should be careful that to choose a mean so that feasible rates are at least within the 95% HPD interval of the prior. (This can be determined by clicking the arrow to the left of the parameter name and looking at the values below the graph that appears on the right.) We keep the default mean value of 1.
 
 Finally, set the prior for the clock rate. We have a good idea about the clock rate of Influenza A/H3N2 Hemagglutinin. From previous work by other people, we know that the clock rate will be around 0.005 substitution per site per year. To include that prior knowledge, we can set the prior on the clock rate to a Log Normal distribution with mean in **real space** set to 0.005. To specify the mean in real space, make sure that the box "Mean In Real Space" is checked. If we set the S value to 0.25, we say that we expect the clock rate to be with 95% certainty between 0.00321 and 0.00731.
 
@@ -150,7 +150,7 @@ We keep the default priors for the parameters gammaShape and kappa.
 
 ### Specify the MCMC chain length (MCMC)
 
-Now switch to the "MCMC" tab. Here we can set the length of the MCMC chain and decide how frequently the parameter and trees are logged. For this dataset, 2 million iterations should be sufficient. In order to have enough samples but not create too large files, we can set the logEvery to 2000, so we have 1001 samples overall. Do this for the tracelog and the treelog. Next, we have to save the `*.xml` file using *File \>\> Save as*.
+Now switch to the "MCMC" tab. Here we can set the length of the MCMC chain and decide how frequently the parameter and trees are logged. For this dataset, 2 million iterations should be sufficient. In order to have enough samples but not create too large files, we can set the logEvery to 2000, so we have 1001 samples overall. Do this for the tracelog and the treelog. Next, we have to save the `*.xml` file using **File** >> **Save as**.
 
 <figure>
 
@@ -162,7 +162,7 @@ Now switch to the "MCMC" tab. Here we can set the length of the MCMC chain and d
 
 ### Run the Analysis using BEAST2
 
-Run the `*.xml` using BEAST2 or use finished runs from the *precooked-runs* folder. The analysis should take about 6 to 7 minutes. If you want to learn some more about what the migration rates we actually estimate, have a look at this blog post of Peter Beerli <http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html>.
+Run the `*.xml` using BEAST2 or use finished runs from the _precooked-runs_ folder. The analysis should take about 6 to 7 minutes. If you want to learn some more about what the migration rates we actually estimate, have a look at this blog post of Peter Beerli <http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html>.
 
 ### Analyse the log file using Tracer
 
@@ -210,7 +210,7 @@ A more in depth explanation of what backwards migration really are can be found 
 
 ### Make the summary tree using TreeAnnotator
 
-Next, we want to summarize the trees. This we can do using TreeAnnotator. Until recently the *maximum clade credibility* tree (MCC) has been the default summary method in TreeAnotator. To produce MCC trees TreeAnotator takes the set of trees and find the best supported tree by maximising the product of the posterior clade probabilities. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges as well as the posterior clade probability for each node. A new point estimate, called a *conditional clade distribution* tree (CCD) has been proposed {% cite berling2025 --file Introduction-to-BEAST2/master-refs %}. It has been shown to outperform MCC in terms of accuracy (based on Robinson-Foulds distance to the true tree) and precision (how different are the point estimates calculated for replicate MCMC chains). CCD methods may produce a tree that would be well supported but has not been sampled during MCMC. This is beneficial for large trees and complex parameter regimes. Since both methods are still widely used, we show how to use them to summarise the posterior tree distribution. **To save time, you may run just one method and compare it to the other using the example below.**
+Next, we want to summarize the trees. This we can do using TreeAnnotator. Until recently the _maximum clade credibility_ tree (MCC) has been the default summary method in TreeAnotator. To produce MCC trees TreeAnotator takes the set of trees and find the best supported tree by maximising the product of the posterior clade probabilities. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges as well as the posterior clade probability for each node. A new point estimate, called a _conditional clade distribution_ tree (CCD) has been proposed {% cite berling2025 --file Introduction-to-BEAST2/master-refs %}. It has been shown to outperform MCC in terms of accuracy (based on Robinson-Foulds distance to the true tree) and precision (how different are the point estimates calculated for replicate MCMC chains). CCD methods may produce a tree that would be well supported but has not been sampled during MCMC. This is beneficial for large trees and complex parameter regimes. Since both methods are still widely used, we show how to use them to summarise the posterior tree distribution. **To save time, you may run just one method and compare it to the other using the example below.**
 
 #### Producing MCC tree
 
@@ -260,7 +260,7 @@ Figures 14 and 15 show the MCC and CCD0 trees respectively. First analyse tree f
 
 We can determine if lineages ancestral to samples from New York are actually inferred to be from Hong Kong, or the probability of the root being in any of the locations.
 
-To get the actual inferred probabilities of each node being in any of the 3 locations, you can go to *Node Labels \>\> Display* an then choose Hong_Kong, New_York or New_Zealand. These are the actual inferred probabilities of the nodes being in any location.
+To get the actual inferred probabilities of each node being in any of the 3 locations, you can go to **Node Labels** >> **Display** an then choose Hong_Kong, New_York or New_Zealand. These are the actual inferred probabilities of the nodes being in any location.
 
 It should however be mentioned that the inference of nodes being in a particular location makes some simplifying assumptions, such as that there are no other locations (i.e. apart from the sampled locations) where lineages could have been.
 
