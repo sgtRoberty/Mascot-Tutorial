@@ -233,9 +233,9 @@ Next, we want to summarize the trees. This we can do using TreeAnnotator. Until 
 To produce CCD0 summary tree, you will first need to install the CCD package.
 > Open BEAUTi
 > 
-> Select **File -> Manage packages**
+> Select **File** >> **Manage packages**
 > 
-> Select **CCD** package in the list and select **Install/Upgrade** [Figure 14](#fig:installCCD)
+> Select **CCD** package in the list and select **Install/Upgrade**
 > 
 > Close BEAUTi
 
