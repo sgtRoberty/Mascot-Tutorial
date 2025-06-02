@@ -62,7 +62,7 @@ First, we have to download the package MASCOT using the BEAUTi package manager. 
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/MascotDownload.png" style="width:50%;"/>
+<a id="fig:example1"></a> <img src="figures/MascotDownload.png" style="width:80%;"/>
 
 <figcaption>Figure 1: Download the MASCOT package.</figcaption>
 
@@ -82,7 +82,7 @@ The sampling times are encoded in the sequence names. We can tell BEAUti to use 
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/TipDates.png" style="width:70%;"/>
+<a id="fig:example1"></a> <img src="figures/TipDates.png" style="width:80%;"/>
 
 <figcaption>Figure 2: Guess sampling times.</figcaption>
 
@@ -98,7 +98,7 @@ Additionally, we should allow for different rate categories for different sites 
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/SiteModel.png" style="width:70%;"/>
+<a id="fig:example1"></a> <img src="figures/SiteModel.png" style="width:80%;"/>
 
 <figcaption>Figure 4: Set the site model.</figcaption>
 
@@ -110,7 +110,7 @@ Now, we move to the _Clock Model_ tab. For rapidly evolving viruses, the assumpt
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/ClockRate.png" style="width:70%;"/>
+<a id="fig:example1"></a> <img src="figures/ClockRate.png" style="width:80%;"/>
 
 <figcaption>Figure 5: Set the initial clock rate.</figcaption>
 
@@ -125,7 +125,7 @@ Initially the column **Location** should be _NOT\_SET_ for every sequence. After
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/TipLocations.png" style="width:70%;"/>
+<a id="fig:example1"></a> <img src="figures/TipLocations.png" style="width:80%;"/>
 
 <figcaption>Figure 3: Configuring sample locations.</figcaption>
 
@@ -143,7 +143,7 @@ Finally, set the prior for the **clock rate**. We have a good idea about the clo
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/Priors.png" style="width:70%;"/>
+<a id="fig:example1"></a> <img src="figures/Priors.png" style="width:80%;"/>
 
 <figcaption>Figure 6: Set up of the prior distributions.</figcaption>
 
@@ -157,7 +157,7 @@ Now switch to the _MCMC_ tab. Here we can set the length of the MCMC chain and d
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/MCMC.png" style="width:70%;"/>
+<a id="fig:example1"></a> <img src="figures/MCMC.png" style="width:80%;"/>
 
 <figcaption>Figure 7: save the \*.xml.</figcaption>
 
@@ -175,7 +175,7 @@ First, we can open the `*.log` file in tracer to check if the MCMC has converged
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/LogPosterior.png" style="width:70%;"/>
+<a id="fig:example1"></a> <img src="figures/LogPosterior.png" style="width:80%;"/>
 
 <figcaption>Figure 8: Check if the posterior converged.</figcaption>
 
@@ -185,7 +185,7 @@ We can have a look at the marginal posterior distributions for the effective pop
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/LogNe.png" style="width:70%;"/>
+<a id="fig:example1"></a> <img src="figures/LogNe.png" style="width:80%;"/>
 
 <figcaption>Figure 9: Compare the different inferred effective population sizes.</figcaption>
 
@@ -195,7 +195,7 @@ In this example, we have relatively little information about the effective popul
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/MeanMedian.png" style="width:70%;"/>
+<a id="fig:example1"></a> <img src="figures/MeanMedian.png" style="width:80%;"/>
 
 <figcaption>Figure 10: Differences between mean and median estimates.</figcaption>
 
@@ -207,7 +207,7 @@ A more in depth explanation of what backwards migration really are can be found 
 
 <figure>
 
-<a id="fig:example1"></a> <img src="figures/LogMigration.png" style="width:70%;"/>
+<a id="fig:example1"></a> <img src="figures/LogMigration.png" style="width:80%;"/>
 
 <figcaption>Figure 11: Compare the inferred migration rates.</figcaption>
 
@@ -229,7 +229,7 @@ A new point estimate, called a **_conditional clade distribution_ tree (CCD)** h
 
 <figure>
 
-<a id="fig:mcc"></a> <img src="figures/treeannotator.mcc.png" style="width:50%;"/>
+<a id="fig:mcc"></a> <img src="figures/treeannotator.mcc.png" style="width:80%;"/>
 
 <figcaption>Figure 12: Make the maximum clade credibility tree.</figcaption>
 
@@ -263,7 +263,7 @@ Now you can proceed to make CCD0 tree:
 
 <figure>
 
-<a id="fig:ccd0"></a> <img src="figures/treeannotator.ccd0.png" width="60%"/>
+<a id="fig:ccd0"></a> <img src="figures/treeannotator.ccd0.png" width="80%"/>
 
 <figcaption>Figure 14: Make the conditional clade credibility tree.</figcaption>
 
